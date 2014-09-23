@@ -31,9 +31,11 @@ ActiveRecord::Schema.define(version: 20140922165300) do
 
   create_table "users", force: true do |t|
     t.string   "user_id"
-    t.string   "display_name"
+    t.string   "name"
     t.string   "email"
-    t.string   "password_digest"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "picURL"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
