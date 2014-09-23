@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require d3.min
+//= require topojson.js
+//= require datamaps.world.min.js
 //= require bootstrap.min
 //= require_tree .
