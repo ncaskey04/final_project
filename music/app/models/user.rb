@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  has_secure_password
   has_many :albums
 
   def spotify
@@ -9,7 +8,8 @@ class User < ActiveRecord::Base
     create! do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
-      user.name = auth["info"]["display_name"]
+      user.name = auth["info"]["name"]
+      user.picURL = auth["extra"]["raw_info"]["images"][0]["url"]
     end
   end
 
