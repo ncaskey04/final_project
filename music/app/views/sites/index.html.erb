@@ -1,4 +1,4 @@
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <!-- NAVBAR -->
 <nav role="navigation" class="navbar navbar-inverse navbar-static-top">
     <div class="container-fluid">
@@ -18,11 +18,11 @@
 
 <!-- toggle with logout when logged in-->
   <% if current_user %>
-<form class="navbar-form navbar-left" role="search">
+<form class="navbar-form navbar-left" role="search" id="form">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search an album title">
+    <input id="searchTerm" type="text" class="form-control" placeholder="Search an album title">
 </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="register btn btn-default">Submit</button>
 </form>
 <li><a href="/signout" data-id="logout" class='scroll-link'>Logout</a></li>
 <% else %>
@@ -36,8 +36,6 @@
 
 <!-- END OF NAVBAR -->
 <div id='map'></div>
-
-
 <!-- MAPBOX -->
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
@@ -62,8 +60,7 @@ var map = L.mapbox.map('map', 'maiahariton.jj72dmb7', {
 //END OF MAPBOX
 
  </script>
-
-
+<!--  <iframe src="https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai" frameborder="0" allowtransparency="true"></iframe> -->
 </div>
 
 
