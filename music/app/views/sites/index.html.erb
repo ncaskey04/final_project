@@ -21,7 +21,12 @@
                 </div>
                  <button type="submit" class="btn btn-default">Submit</button>
             </form>
-                <li><a href="auth/spotify" data-id="signup" class='scroll-link'>Login</a></li> <!-- toggle with logout when logged in-->
+<!-- toggle with logout when logged in-->
+<% if current_user %>
+<li><a href="/signout" data-id="logout" class='scroll-link'>Logout</a></li>
+<% else %>
+<li><a href="auth/spotify" data-id="signup" class='scroll-link'>Login</a></li>
+<% end %>
             </ul>
         </div>
     </div>
