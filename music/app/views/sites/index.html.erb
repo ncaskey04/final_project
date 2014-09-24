@@ -13,20 +13,22 @@
             <a href="sites#index" class="navbar-brand">Chirp</a>
         </div>
 
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
+<div id="navbarCollapse" class="collapse navbar-collapse">
+   <ul class="nav navbar-nav navbar-right">
+
 <!-- toggle with logout when logged in-->
   <% if current_user %>
 <form class="navbar-form navbar-left" role="search">
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Search an album title">
-                </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-            </form>
+</div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
 <li><a href="/signout" data-id="logout" class='scroll-link'>Logout</a></li>
 <% else %>
 <li><a href="auth/spotify" data-id="signup" class='scroll-link'>Login</a></li>
 <% end %>
+
             </ul>
         </div>
     </div>

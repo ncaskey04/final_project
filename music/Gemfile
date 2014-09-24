@@ -42,6 +42,7 @@ gem 'gon'
 
 gem "spotify", "~> 12.5.3"
 
+gem 'oauth2'
 gem 'omniauth-spotify'
 
 group :production do
