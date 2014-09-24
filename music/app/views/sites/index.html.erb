@@ -1,6 +1,6 @@
 
 <!-- NAVBAR -->
-<nav role="navigation" class="navbar navbar-default navbar-static-top">
+<nav role="navigation" class="navbar navbar-inverse navbar-static-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -34,9 +34,22 @@
 </style>
 <script>
 
-    L.mapbox.accessToken = 'pk.eyJ1IjoibWFpYWhhcml0b24iLCJhIjoiU2NmbHRNRSJ9.HRw-ldpBtOXxKIkqZQmIYQ';
-    L.mapbox.map('map', 'maiahariton.jj72dmb7').setView([37.7749300 , -122.4194200
-], 9);
+//MAPBOX
+L.mapbox.accessToken = 'pk.eyJ1IjoibWFpYWhhcml0b24iLCJhIjoiU2NmbHRNRSJ9.HRw-ldpBtOXxKIkqZQmIYQ';
+var map = L.mapbox.map('map', 'maiahariton.jj72dmb7', {
+    // Disable default double-click behavior.
+    doubleClickZoom: false
+}).setView([37.7749300 , -122.4194200
+], 9).on('dblclick', function(e) {
+    // Zoom exactly to each double-clicked point
+    map.setView(e.latlng, map.getZoom() + 1);
+});
+
+//     L.mapbox.accessToken = 'pk.eyJ1IjoibWFpYWhhcml0b24iLCJhIjoiU2NmbHRNRSJ9.HRw-ldpBtOXxKIkqZQmIYQ';
+//     L.mapbox.map('map', 'maiahariton.jj72dmb7').setView([37.7749300 , -122.4194200
+// ], 9);
+
+//END OF MAPBOX
 
  </script>
 </div>
