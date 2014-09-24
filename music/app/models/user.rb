@@ -1,8 +1,16 @@
 class User < ActiveRecord::Base
   has_many :albums
 
-  def spotify
-  end
+  validates :name,
+            :presence => true,
+            :uniqueness => true
+
+  validates :provider,
+            :presence => true
+
+  validates :uid, 
+            :presence => true,
+            :uniqueness => true
 
   def self.authenticate email, password
     User.find_by_email(email).try(:authenticate,password)
