@@ -7,6 +7,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :provider
       t.string :uid
       t.string :picURL
+      t.string :token
+      t.string :refresh_token
 
       t.timestamps
     end

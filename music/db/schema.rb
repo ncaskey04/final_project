@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 20140922165300) do
     t.string   "provider"
     t.string   "uid"
     t.string   "picURL"
+    t.string   "token"
+    t.string   "refresh_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

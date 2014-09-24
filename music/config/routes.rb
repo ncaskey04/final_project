@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   root 'sites#index'
 
+  get "/get_info", to: "spotify#get_info"
+
   # resources :users
   resources :sites
   # match "*path", to: "sites#index", via: "get"
