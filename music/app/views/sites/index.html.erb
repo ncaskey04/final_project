@@ -39,10 +39,12 @@
 <!-- MAPBOX -->
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
+
 <style>
   body { margin:0; padding:0; }
   #map { position:absolute; top:0; bottom:0; width:100%; }
 </style>
+
 <script>
 
 //MAPBOX
@@ -51,10 +53,42 @@ var map = L.mapbox.map('map', 'maiahariton.jj72dmb7', {
     // Disable default double-click behavior.
     doubleClickZoom: false
 }).setView([37.7749300 , -122.4194200
-], 9).on('dblclick', function(e) {
+], 9).featureLayer.setGeoJSON(geojson).on('dblclick', function(e) {
     // Zoom exactly to each double-clicked point
     map.setView(e.latlng, map.getZoom() + 1);
 });
+
+// var geojson = [
+//   {
+//     "type": "Feature",
+//     "geometry": {
+//       "type": "Point",
+//       "coordinates": [-77.03238901390978,38.913188059745586]
+//     },
+//     "properties": {
+//       "title": "Mapbox DC",
+//       "description": "1714 14th St NW, Washington DC",
+//       "marker-color": "#fc4353",
+//       "marker-size": "large",
+//       "marker-symbol": "monument"
+//     }
+//   },
+//   {
+//     "type": "Feature",
+//     "geometry": {
+//       "type": "Point",
+//       "coordinates": [-122.414, 37.776]
+//     },
+//     "properties": {
+//       "title": "Mapbox SF",
+//       "description": "155 9th St, San Francisco",
+//       "marker-color": "#fc4353",
+//       "marker-size": "large",
+//       "marker-symbol": "harbor"
+//     }
+//   }
+// ];
+
 
 
 //END OF MAPBOX
