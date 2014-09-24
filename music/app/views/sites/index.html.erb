@@ -13,14 +13,20 @@
             <a href="sites#index" class="navbar-brand">Chirp</a>
         </div>
 
-
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
+             <form class="navbar-form navbar-left" role="search">
+                 <div class="form-group">
+                 <input type="text" class="form-control" placeholder="Search">
+                </div>
+                 <button type="submit" class="btn btn-default">Submit</button>
+            </form>
                 <li><a href="auth/spotify" data-id="signup" class='scroll-link'>Login</a></li> <!-- toggle with logout when logged in-->
             </ul>
         </div>
     </div>
 </nav>
+
 <!-- END OF NAVBAR -->
 <div id='map'></div>
 
@@ -45,18 +51,13 @@ var map = L.mapbox.map('map', 'maiahariton.jj72dmb7', {
     map.setView(e.latlng, map.getZoom() + 1);
 });
 
-//     L.mapbox.accessToken = 'pk.eyJ1IjoibWFpYWhhcml0b24iLCJhIjoiU2NmbHRNRSJ9.HRw-ldpBtOXxKIkqZQmIYQ';
-//     L.mapbox.map('map', 'maiahariton.jj72dmb7').setView([37.7749300 , -122.4194200
-// ], 9);
 
 //END OF MAPBOX
 
  </script>
+
+
 </div>
-
-
-
-
 
 
 </body>
