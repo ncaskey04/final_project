@@ -2,7 +2,6 @@ $(document).ready(function() {
   var latLong = [];
   $('#form').on('submit',  function(e) {
     e.preventDefault();
-    alert("Form submitted");
     var album = $('#searchTerm').val();
     var results = getResult(album);
 
