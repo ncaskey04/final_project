@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var latLong = []
+  var latLong = [];
   $('#form').on('submit',  function(e) {
   e.preventDefault();
   alert("Form submitted");
@@ -33,21 +33,21 @@ $(document).ready(function() {
             var latitude = countries[i].latitude;
             var longitude = countries[i].longitude;
             if (iso2Code == market){
-              latLong.push({lng: longitude, lat: latitude})
+              latLong.push({lng: longitude, lat: latitude});
             } else {
               console.log("This is not a valid market");
             }
           }
-          console.log(latLong)
-        mapMarkers(latLong)
+          console.log(latLong);
+        mapMarkers(latLong);
       };
 
       function mapMarkers (latlong) {
         for(var i = 0; i < latLong.length; i++ ){
-          var arr =[]
+          var arr =[];
           for (var key in latLong[i]) {
             if (latLong[i].hasOwnProperty(key)) {
-              arr.push(latLong[i][key])
+              arr.push(latLong[i][key]);
               }
             }
 
@@ -72,7 +72,7 @@ $(document).ready(function() {
 
     }
   }
-})
+});
 });
 
 
