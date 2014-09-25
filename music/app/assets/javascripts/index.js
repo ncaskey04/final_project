@@ -10,9 +10,6 @@ $(document).ready(function() {
   });
 });
 
-
-
-
 function getResult(search){
 $.ajax({
     type: 'GET',
