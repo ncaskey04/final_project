@@ -53,7 +53,7 @@ var map = L.mapbox.map('map', 'maiahariton.jj72dmb7', {
     // Disable default double-click behavior.
     doubleClickZoom: false
 }).setView([37.7749300 , -122.4194200
-], 9).featureLayer.setGeoJSON(geojson).on('dblclick', function(e) {
+], 9).on('dblclick', function(e) {
     // Zoom exactly to each double-clicked point
     map.setView(e.latlng, map.getZoom() + 1);
 });

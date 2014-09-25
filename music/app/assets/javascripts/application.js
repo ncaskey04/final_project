@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= reuiqre countries.js
+//= require countries.js
 //= require d3.min
 //= require topojson.js
 //= require datamaps.world.min.js
