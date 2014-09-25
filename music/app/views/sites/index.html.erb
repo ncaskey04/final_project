@@ -47,60 +47,18 @@
 
 <script>
 
-//MAPBOX
-L.mapbox.accessToken = 'pk.eyJ1IjoibWFpYWhhcml0b24iLCJhIjoiU2NmbHRNRSJ9.HRw-ldpBtOXxKIkqZQmIYQ';
-var map = L.mapbox.map('map', 'maiahariton.jj72dmb7', {
-    // Disable default double-click behavior.
-    doubleClickZoom: false
-}).setView([37.7749300 , -122.4194200
-], 9).on('dblclick', function(e) {
-    // Zoom exactly to each double-clicked point
-    map.setView(e.latlng, map.getZoom() + 1);
-});
+              //MAPBOX
+              L.mapbox.accessToken = 'pk.eyJ1IjoibWFpYWhhcml0b24iLCJhIjoiU2NmbHRNRSJ9.HRw-ldpBtOXxKIkqZQmIYQ';
+      var map = L.mapbox.map('map', 'maiahariton.jj72dmb7', {
+          // Disable default double-click behavior.
+          doubleClickZoom: false
+      }).setView([37.7749300 , -122.4194200
+      ], 9).on('dblclick', function(e) {
+          // Zoom exactly to each double-clicked point
+          map.setView(e.latlng, map.getZoom() + 1);
+      });
+</script>
 
-
-// var geojson = [
-//   {
-//     "type": "Feature",
-//     "geometry": {
-//       "type": "Point",
-//       "coordinates": [-77.03238901390978,38.913188059745586]
-//     },
-//     "properties": {
-//       "title": "Mapbox DC",
-//       "description": "1714 14th St NW, Washington DC",
-//       "marker-color": "#fc4353",
-//       "marker-size": "large",
-//       "marker-symbol": "monument"
-//     }
-//   },
-//   {
-//     "type": "Feature",
-//     "geometry": {
-//       "type": "Point",
-//       "coordinates": [-122.414, 37.776]
-//     },
-//     "properties": {
-//       "title": "Mapbox SF",
-//       "description": "155 9th St, San Francisco",
-//       "marker-color": "#fc4353",
-//       "marker-size": "large",
-//       "marker-symbol": "harbor"
-//     }
-//   }
-// ];
-
-// Create pins at places in the geojson file.
-// var pins = [];
-// for (var i = 0; i < geojson.features.length; i++) {
-//     pins.push('pin-s(' + geojson.features[i].geometry.coordinates.join(',') + ')');
-// }
-
-
-
-//END OF MAPBOX
-
- </script>
 <!--  <iframe src="https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai" frameborder="0" allowtransparency="true"></iframe> -->
 </div>
 
