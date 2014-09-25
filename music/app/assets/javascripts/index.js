@@ -10,28 +10,22 @@ $(document).ready(function() {
    });
 });
 
-
-
-
 function getResult(search){
  $.ajax({
     type: 'GET',
     url: 'https://api.spotify.com/v1/' + 'search?q=name&type=album,track',
     dataType: "json",
-  }).done(function(data) {
+  }).success(function(data) {
+    debugger
     console.log(data);
+    // looop thru albums
+        // loop thru album country codes
+             // getLatLng for country code
+             // put on map
   });
 }
 
-// function searchAlbum(id){
-//  $.ajax({
-//     type: 'GET',
-//     url: 'https://api.spotify.com/v1/albums/' + id,
-//     dataType: "json",
-//   }).done(function(data) {
-//     console.log(data);
-//   });
-// }
+
 
 
 
