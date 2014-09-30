@@ -14,6 +14,7 @@ $(document).ready(function() {
         //console.log(data);
         for (i = 0; i < data.albums.items.length; i ++){
           var album = data.albums.items[i];
+          console.log(album);
           for (j=0; j < album.available_markets.length; j++){
             var market = album.available_markets[j];
             var coord = getLatLong(market);
