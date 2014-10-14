@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/login', :to => 'sessions#new', :as => :login
   # get "/auth/:provider/callback" => "sessions#create"
-  get "/spoticate.herokuapp.com/callback" => "sessions#create"
+  get "/spoticate.herokuapp.com/auth/heroku/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
 
   root 'sites#index'
