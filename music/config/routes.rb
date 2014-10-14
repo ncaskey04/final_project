@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get 'articles/index'
 
   get '/login', :to => 'sessions#new', :as => :login
-  get "/auth/:provider/callback" => "sessions#create"
+  # get "/auth/:provider/callback" => "sessions#create"
+  get "/spoticate.herokuapp.com/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
 
   root 'sites#index'
