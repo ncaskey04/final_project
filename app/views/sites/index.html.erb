@@ -1,0 +1,67 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- NAVBAR -->
+<nav role="navigation" class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="sites#index" class="navbar-brand">Chirp</a>
+        </div>
+
+<div id="navbarCollapse" class="collapse navbar-collapse">
+   <ul class="nav navbar-nav navbar-right">
+
+<!-- toggle with logout when logged in-->
+  <% if current_user %>
+<form class="navbar-form navbar-left" role="search" id="form">
+  <div class="form-group">
+    <input id="searchTerm" type="text" class="form-control" placeholder="Search an album title">
+</div>
+    <button type="submit" class="register btn btn-default">Submit</button>
+</form>
+<li><a href="/signout" data-id="logout" class='scroll-link'>Logout</a></li>
+<% else %>
+<li><a href="auth/spotify" data-id="signup" class='scroll-link'>Login</a></li>
+<% end %>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- END OF NAVBAR -->
+<div id='map'></div>
+<!-- MAPBOX -->
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
+
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+
+<script>
+
+              //MAPBOX
+              L.mapbox.accessToken = 'pk.eyJ1IjoibWFpYWhhcml0b24iLCJhIjoiU2NmbHRNRSJ9.HRw-ldpBtOXxKIkqZQmIYQ';
+      var map = L.mapbox.map('map', 'maiahariton.jj72dmb7', {
+          // Disable default double-click behavior.
+          doubleClickZoom: false
+      }).setView([37.7749300 , -122.4194200
+      ], 9).on('dblclick', function(e) {
+          // Zoom exactly to each double-clicked point
+          map.setView(e.latlng, map.getZoom() + 1);
+      });
+</script>
+
+<!--  <iframe src="https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai" frameborder="0" allowtransparency="true"></iframe> -->
+</div>
+
+
+</body>
+</html>
