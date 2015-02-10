@@ -12,6 +12,13 @@ class User < ActiveRecord::Base
             :presence => true,
             :uniqueness => true
 
+  attr_accessor :user_id, :name, :email
+  def initialize(user_id, name, email)
+    @user_id = user_id
+    @name = name
+    @email = email
+  end
+
   def self.authenticate email, password
     User.find_by_email(email).try(:authenticate,password)
   end
